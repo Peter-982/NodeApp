@@ -5,12 +5,12 @@ pipeline {
 	}
 	environment {
 		DOCKER_HUB_CREDENTIALS_ID = 'dockercred'
-		DOCKER_HUB_REPO = 'dockerpo82/NodeApp'
+		DOCKER_HUB_REPO = 'dockerpo82/nodeapp'
 	}
 	stages {
 		stage('Checkout Github'){
 			steps {
-				git branch: 'main', credentialsId: 'github', url: 'https://github.com/Peter-982/NodeApp.git'
+				git branch: 'main', credentialsId: 'github', url: 'https://github.com/Peter-982/nodeapp.git'
 			}
 		}		
 		stage('Install node dependencies'){
